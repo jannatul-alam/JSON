@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Skill Studio | Registration Desk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Campus Skill Studio</h1>
+    <p>Workshop Registration Desk</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Register for a Workshop</h2>
+      <form id="skillForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName">
+
+        <label for="studentCode">Student ID</label>
+        <input type="text" id="studentCode" name="studentCode">
+
+        <label for="emailAddress">Email Address</label>
+        <input type="email" id="emailAddress" name="emailAddress">
+
+        <label for="sessionChoice">Workshop</label>
+        <select id="sessionChoice" name="sessionChoice">
+          <option value="">Choose a workshop</option>
+          <option value="Responsive Web Design">Responsive Web Design</option>
+          <option value="JavaScript Essentials">JavaScript Essentials</option>
+          <option value="Git and GitHub Basics">Git and GitHub Basics</option>
+        </select>
+
+        <button type="button" onclick="saveWorkshopEntry()">Save Registration</button>
+        <p id="statusMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>JSON Preview</h2>
+      <pre id="dataPreview">No registration data yet.</pre>
+    </section>
+
+    <section class="card">
+      <h2>Saved Registration</h2>
+      <button type="button" onclick="loadWorkshopEntry()">Load Saved Registration</button>
+      <button type="button" onclick="removeWorkshopEntry()">Clear Saved Data</button>
+      <p id="savedResult" class="message">Saved information will appear here.</p>
+    </section>
+  </main>
+
+  <footer>Student Practice Project | CSE Web Lab</footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
